@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, {useState, useEffect} from 'react'
 import NoteItem from '../NoteItem/NoteItem'
 import './NoteBoard.css'
-import { notesDB } from '../../data'
-import { getColor } from '../../palette'
+import {notesDB} from '../../data'
+import {getColor} from '../../palette'
 
 function NoteBoard() {
 
@@ -14,7 +14,7 @@ function NoteBoard() {
     });
     const [notes, setNotes] = useState(data);
 
-    const deleteNote = (id) => {
+    function deleteNote(id) {
         const newNotes = notes.filter(item => {
             return item.id !== id;
         });
@@ -25,7 +25,7 @@ function NoteBoard() {
         saveToStorage();
     }, [notes]);
 
-    const editNote = (note) => {
+    function editNote(note) {
         const newNotes = notes.map(item => {
             if (item.id !== note.id) return item;
             else return note;
@@ -33,7 +33,7 @@ function NoteBoard() {
         setNotes(newNotes);
     }
 
-    const addNote = () => {
+    function addNote() {
         const newNotes = notes.slice();
         const newId = Math.round(new Date().getTime() / 1000);
         newNotes.push({
@@ -47,21 +47,21 @@ function NoteBoard() {
         setNotes(newNotes);
     }
 
-    const saveToStorage = () => {
+    function saveToStorage() {
         const data = JSON.stringify(notes);
         localStorage.setItem('notesBackUp', data);
     }
 
     return (
         <>
-            <button onClick={addNote}>
-                <img className="add-btn" src="https://image.flaticon.com/icons/png/512/189/189689.png" alt="" />
-            </button>
-            <div className="note-board">
-                {notes.map((note) => (
-                    <NoteItem key={note.id} value={note} onDelete={deleteNote} onEdit={editNote} />
-                ))}
-            </div>
+        <button onClick={addNote}>
+            <img className="add-btn" src="https://image.flaticon.com/icons/png/512/189/189689.png" alt=""/>
+        </button>
+        <div className="note-board">
+            {notes.map((note) => (
+                <NoteItem key={note.id} value={note} onDelete={deleteNote} onEdit={editNote}/>
+            ))}
+        </div>
         </>
     )
 }

@@ -1,32 +1,32 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import './NoteItem.css'
 
 function NoteItem(props) {
     const [note, setNote] = useState(props.value);
     const [editMode, setEditMode] = useState(false);
 
-    const handleMouseDown = (e) => {
+    function handleMouseDown(e) {
         setPosition(e.pageX, e.pageY);
         document.onmousemove = function (e) {
             setPosition(e.pageX, e.pageY);
         }
     }
 
-    const handleMouseUp = (e) => {
+    function handleMouseUp() {
         document.onmousemove = null;
     }
 
-    const setPosition = (x, y) => {
+    function setPosition(x, y) {
         const updatedNote = {
             ...note,
             x: x - 100,
-            y: y - 25
+            y: y - 30
         };
         setNote(updatedNote);
         props.onEdit(updatedNote);
     }
 
-    const onNoteChange = (e) => {
+    function onNoteChange(e) {
         const updatedNote = {
             ...note,
             [e.target.name]: e.target.value
@@ -35,14 +35,15 @@ function NoteItem(props) {
         props.onEdit(updatedNote);
     }
 
-    const onDeleteBtnClick = (e) => {
+    function onDeleteBtnClick() {
         props.onDelete(note.id);
     }
 
     const btnClose = (
         <svg width="20px" viewBox="0 0 24 24">
             <g>
-                <path fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" d="M16,19H8c-0.552,0-1-0.448-1-1V6h10v12C17,18.552,16.552,19,16,19z">
+                <path fill="none" stroke="white" strokeWidth="2" strokeLinecap="round"
+                      d="M16,19H8c-0.552,0-1-0.448-1-1V6h10v12C17,18.552,16.552,19,16,19z">
                 </path>
                 <line fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" x1="5" y1="6" x2="19" y2="6">
                 </line>
@@ -52,15 +53,15 @@ function NoteItem(props) {
         </svg>
     );
 
-    const handleDragStart = function () {
+    function handleDragStart() {
         return false;
     };
 
-    const toViewMode = function () {
+    function toViewMode() {
         setEditMode(false);
     };
 
-    const toEditMode = function (e) {
+    function toEditMode(e) {
         setEditMode(true);
     };
 
@@ -73,11 +74,11 @@ function NoteItem(props) {
             }}
         >
             <div className="note-header"
-                style={{
-                    backgroundColor: note.color
-                }}
+                 style={{
+                     backgroundColor: note.color
+                 }}
             >
-                <img className="note-pin" src="https://i.imgur.com/9veNsY8.png" alt="" />
+                <img className="note-pin" src="https://i.imgur.com/9veNsY8.png" alt=""/>
                 {editMode ? (
                     <input
                         className="edit-mode"
@@ -88,12 +89,12 @@ function NoteItem(props) {
                         onBlur={toViewMode}
                     />
                 ) : (
-                        <span
-                            className="view-mode"
-                            onClick={toEditMode}
-                        >{note.title}
+                    <span
+                        className="view-mode"
+                        onClick={toEditMode}
+                    >{note.title}
                         </span>
-                    )
+                )
                 }
                 <div
                     className="note-move"
