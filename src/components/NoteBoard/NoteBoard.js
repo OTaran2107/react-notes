@@ -59,7 +59,7 @@ function NoteBoard() {
         </button>
         <div className="note-board">
             {notes.map((note) => (
-                <NoteItem key={note.id} value={note} onDelete={deleteNote} onEdit={editNote}/>
+                <NoteItem key={note.id} note={note} onDelete={deleteNote} onEdit={editNote}/>
             ))}
         </div>
         </>

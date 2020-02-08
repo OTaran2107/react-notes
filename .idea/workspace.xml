@@ -20,8 +20,8 @@
       <file leaf-file-name="NoteBoard.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/NoteBoard/NoteBoard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+            <state relative-caret-position="326">
+              <caret line="61" column="44" lean-forward="false" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -32,8 +32,8 @@
       <file leaf-file-name="NoteItem.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/NoteItem/NoteItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+            <state relative-caret-position="120">
+              <caret line="8" column="45" lean-forward="false" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -56,8 +56,8 @@
       <list>
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/components/NoteItem/NoteItem.css" />
-        <option value="$PROJECT_DIR$/src/components/NoteItem/NoteItem.js" />
         <option value="$PROJECT_DIR$/src/components/NoteBoard/NoteBoard.js" />
+        <option value="$PROJECT_DIR$/src/components/NoteItem/NoteItem.js" />
       </list>
     </option>
   </component>
@@ -173,12 +173,12 @@
       <option name="presentableId" value="Default" />
       <updated>1581115534467</updated>
       <workItem from="1581115537705" duration="296000" />
-      <workItem from="1581157803121" duration="1652000" />
+      <workItem from="1581157803121" duration="3306000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1948000" />
+    <option name="totallyTimeSpent" value="3602000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
@@ -252,8 +252,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/NoteBoard/NoteBoard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        <state relative-caret-position="326">
+          <caret line="61" column="44" lean-forward="false" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>
@@ -262,8 +262,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/NoteItem/NoteItem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        <state relative-caret-position="120">
+          <caret line="8" column="45" lean-forward="false" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>

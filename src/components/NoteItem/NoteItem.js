@@ -1,8 +1,7 @@
 import React, {useState} from 'react'
 import './NoteItem.css'
 
-function NoteItem(props) {
-    const [note, setNote] = useState(props.value);
+function NoteItem({note, onEdit, onDelete}) {
     const [editMode, setEditMode] = useState(false);
 
     function handleMouseDown(e) {
@@ -22,8 +21,7 @@ function NoteItem(props) {
             x: x - 100,
             y: y - 30
         };
-        setNote(updatedNote);
-        props.onEdit(updatedNote);
+        onEdit(updatedNote);
     }
 
     function onNoteChange(e) {
@@ -31,12 +29,11 @@ function NoteItem(props) {
             ...note,
             [e.target.name]: e.target.value
         };
-        setNote(updatedNote);
-        props.onEdit(updatedNote);
+        onEdit(updatedNote);
     }
 
     function onDeleteBtnClick() {
-        props.onDelete(note.id);
+        onDelete(note.id);
     }
 
     const btnClose = (
