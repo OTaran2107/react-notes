@@ -23,7 +23,7 @@ function NoteBoard() {
 
     useEffect(() => {
         saveToStorage();
-    });
+    }, [notes]);
 
     const editNote = (note) => {
         const newNotes = notes.map(item => {
